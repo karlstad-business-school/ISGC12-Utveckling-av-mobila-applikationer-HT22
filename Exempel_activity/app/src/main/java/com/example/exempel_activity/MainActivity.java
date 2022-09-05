@@ -16,11 +16,12 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnActivity1 = findViewById(R.id.btn_activity_1);
         Button btnActivity2 = findViewById(R.id.btn_activity_2);
-        Button btnActivity3 = findViewById(R.id.btn_activity_3);
+
 
 
         //Tänk på "this" i detta fall
         //This refererar till det vi är inte och inte enbart huvudklassen
+        //Explicit
         btnActivity1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,19 +38,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnActivity3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String CUSTOM_ACTION = "com.example.exempel_activity.TriggerA";
 
-                Intent i = new Intent();
-                i.setAction(CUSTOM_ACTION);
-                startActivity(i);
-            }
-        });
+
     }
 
-
+    //Explicit
     private void startActivity2(){
         Intent i = new Intent(this, activity_test2.class);
         startActivity(i);

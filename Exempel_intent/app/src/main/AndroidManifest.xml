@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExempelIntent">
         <activity
+            android:name=".activity_test3"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.exempel_intent.TriggerA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

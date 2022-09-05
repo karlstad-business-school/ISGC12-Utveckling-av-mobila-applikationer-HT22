@@ -25,13 +25,6 @@
             android:layout_weight="1"
             android:text="Starta aktivitet 2" />
 
-        <Button
-            android:id="@+id/btn_activity_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Starta aktivitet 3" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

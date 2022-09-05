@@ -10,15 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Exempel_activity">
         <activity
-            android:name=".activity_test3"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.example.exempel_activity.TriggerA" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".activity_test2"
             android:exported="true" />
         <activity

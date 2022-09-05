@@ -1,4 +1,4 @@
-package com.example.exempel_activity;
+package com.example.exempelintent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
