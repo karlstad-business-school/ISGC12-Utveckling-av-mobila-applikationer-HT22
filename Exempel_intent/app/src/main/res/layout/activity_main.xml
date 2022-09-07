@@ -4,6 +4,13 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="42sp"
+        android:layout_marginBottom="26dp"
+        android:text="Implicit intent"/>
+
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -21,7 +28,6 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="Starta aktivitet 3" />
 
 </LinearLayout>

@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
                 emailIntent.setType("plain/text");
                 startActivity(Intent.createChooser(emailIntent, "Send your email in:"));
-
             }
         });
 

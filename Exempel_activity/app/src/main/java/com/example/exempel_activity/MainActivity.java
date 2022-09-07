@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
         Button btnActivity1 = findViewById(R.id.btn_activity_1);
         Button btnActivity2 = findViewById(R.id.btn_activity_2);
 
-
-
         //Tänk på "this" i detta fall
         //This refererar till det vi är inte och inte enbart huvudklassen
         //Explicit

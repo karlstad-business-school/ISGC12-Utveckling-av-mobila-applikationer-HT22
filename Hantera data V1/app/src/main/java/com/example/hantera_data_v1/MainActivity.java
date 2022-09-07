@@ -46,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void removeStudent(View view){
+        EditText rId = (EditText)findViewById(R.id.remove_id);
+        database.remove(Integer.parseInt(rId.getText().toString()));
+        updateStudentList();
+    }
+
+
     private  void saveStudent(int id, String namn, String pnr){
         Student s = new Student(id, namn, pnr);
         database.add(s);
