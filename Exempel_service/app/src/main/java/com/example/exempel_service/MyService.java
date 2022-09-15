@@ -32,19 +32,3 @@ public class MyService extends Service {
         return null;
     }
 }
-
-
-    /*@Override
-    public void onStart(Intent intent, int startId){
-        for(int i = 0; i < 5; i++){
-            Log.d("MY SERVICE", "Loopar varannan sekund, loop: " + i);
-            synchronized (this){
-                try{
-                    wait(2000);
-                }catch(Exception e){
-
-                }
-            }
-        }
-        stopSelf(startId);
-    }*/

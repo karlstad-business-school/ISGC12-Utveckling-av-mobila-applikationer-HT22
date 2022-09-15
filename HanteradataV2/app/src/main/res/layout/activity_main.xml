@@ -85,7 +85,7 @@
                 android:layout_marginTop="32dp">
 
                 <EditText
-                    android:id="@+id/remove_id"
+                    android:id="@+id/search_id"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="32sp"
@@ -95,9 +95,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:text="Ta bort"
+                    android:text="Sök"
                     android:textSize="24sp"
-                    android:onClick="removeStudent"/>
+                    android:onClick="searchStudent"/>
             </LinearLayout>
 
         </LinearLayout>

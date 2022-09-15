@@ -24,14 +24,5 @@ public class MainActivity extends AppCompatActivity {
                 startService(intent);
             }
         });
-
-        ComponentName service = startService(new Intent("com.example.service"));
-        try{
-            Class serviceClass = Class.forName(service.getClassName());
-            stopService(new Intent(this, serviceClass));
-        }catch(Exception e){
-
-        }
-
     }
 }

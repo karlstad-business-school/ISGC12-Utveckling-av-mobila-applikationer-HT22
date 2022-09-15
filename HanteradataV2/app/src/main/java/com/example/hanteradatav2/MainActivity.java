@@ -2,6 +2,7 @@ package com.example.hanteradatav2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,9 +46,23 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        updateStudentList();
+    }
+
+
+    public void searchStudent(View view){
+        EditText sId = (EditText)findViewById(R.id.search_id);
+        int id = Integer.parseInt(sId.getText().toString());
+        Intent intent = new Intent(MainActivity.this, student_view.class);
+        intent.putExtra("student_id", id);
+        startActivity(intent);
+    }
 
     public void removeStudent(View view){
-        EditText rId = (EditText)findViewById(R.id.remove_id);
+        EditText rId = (EditText)findViewById(R.id.search_id);
         database.remove(Integer.parseInt(rId.getText().toString()));
         updateStudentList();
     }
