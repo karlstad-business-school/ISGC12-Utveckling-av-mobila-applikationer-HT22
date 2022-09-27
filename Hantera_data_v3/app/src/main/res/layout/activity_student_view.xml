@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".student_view">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/student_view_namn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="NAMN"
+            android:textStyle="bold"
+            android:textSize="48sp"/>
+
+        <TextView
+            android:id="@+id/student_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID: "
+            android:paddingLeft="6sp"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:id="@+id/student_view_pnr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personnummer: "
+            android:paddingLeft="6sp"
+            android:textSize="26sp"/>
+
+
+        <Button
+            android:id="@+id/remove_btn"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Ta bort"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
