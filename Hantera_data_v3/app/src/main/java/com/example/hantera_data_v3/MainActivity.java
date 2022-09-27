@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, student_view.class);
                 intent.putExtra("student_id", id);
                 startActivity(intent);
+                sId.setText("");
             }else{
                 Toast.makeText(getApplicationContext(), "Studenten med ID: " + id + " finns inte i vår databas!", Toast.LENGTH_LONG).show();
             }
@@ -75,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
         Student s = new Student(id, namn, pnr);
         database.add(s);
 
+        id_ET.setText("");
+        namn_ET.setText("");
+        pnr_ET.setText("");
         updateStudentList();
     }
 
