@@ -18,8 +18,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private ArrayList<String> list = new ArrayList<>();
-
+   // private ArrayList<String> list = new ArrayList<>();
     private TextView cityText, sunText, tempText, skyText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +37,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void getData(){
-        list = new ArrayList<>();
+        //list = new ArrayList<>();
         String city = "Karlstad";
         URL url;
-        String API_KEY = "ER API NYCKEL FRÅN OPENWEATHERMAP";
+        String API_KEY = "343cf30f827898c02af872a00bf3528e";
 
         try{
-            url = new URL("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + API_KEY + "&mode=xml");
+            url = new URL("https://api.openweathermap.org/data/2.5/weather?q="
+                    + city + "&appid=" + API_KEY + "&mode=xml");
             XmlPullParserFactory parserCreator = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserCreator.newPullParser();
             parser.setInput(url.openStream(), null);
@@ -67,15 +67,15 @@ public class MainActivity extends AppCompatActivity {
                     if (tagName.equals("clouds")) {
                         skyText.setText("Sky: "+parser.getAttributeValue(1));
                     }
-                    /*
-                    Log.d("XML", "Start tag found: " + tagName);
+
+                    /*Log.d("XML", "Start tag found: " + tagName);
                     Log.d("XML", "Text found: " + parser.nextText());
                     int count = parser.getAttributeCount();
                     if(count > 0){
                         Log.d("XML", "Attribute found: " + parser.getAttributeName(0));
                     }
                     Log.d("XML", "Attribute value found: " + parser.getAttributeValue(null, "id"));
-                    */
+        */
                 }
 
                 parserEvent = parser.next();
