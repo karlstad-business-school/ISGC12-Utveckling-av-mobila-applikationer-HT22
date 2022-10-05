@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //list = new ArrayList<>();
         String city = "Karlstad";
         URL url;
-        String API_KEY = "343cf30f827898c02af872a00bf3528e";
+        String API_KEY = "MY API KEY";
 
         try{
             url = new URL("https://api.openweathermap.org/data/2.5/weather?q="
@@ -51,41 +51,27 @@ public class MainActivity extends AppCompatActivity {
 
             int parserEvent = parser.getEventType();
             String tagName;
+            parser.setInput(url.openStream(), null);
 
             while(parserEvent != XmlPullParser.END_DOCUMENT){
                 if(parserEvent == XmlPullParser.START_TAG){
                     tagName = parser.getName();
-                    if (tagName.equals("city")) {
-                        cityText.setText("City: "+parser.getAttributeValue(1));
-                    }
-                    if (tagName.equals("sun")) {
-                        sunText.setText("Sun rises: "+parser.getAttributeValue(0));
-                    }
-                    if (tagName.equals("temperature")) {
-                        tempText.setText("Temperature: "+(Float.parseFloat(parser.getAttributeValue(1))- 273.15));
-                    }
-                    if (tagName.equals("clouds")) {
-                        skyText.setText("Sky: "+parser.getAttributeValue(1));
-                    }
+                    if(tagName.contains("country")){
+                        Log.e("FOUND TAG", "TAG -> " + tagName);
 
-                    /*Log.d("XML", "Start tag found: " + tagName);
-                    Log.d("XML", "Text found: " + parser.nextText());
-                    int count = parser.getAttributeCount();
-                    if(count > 0){
-                        Log.d("XML", "Attribute found: " + parser.getAttributeName(0));
+                        parser.next();
+                        String text = parser.getText();
+                        Log.e("FOUND TEXT", "TEXT -> " + text);
                     }
-                    Log.d("XML", "Attribute value found: " + parser.getAttributeValue(null, "id"));
-        */
                 }
-
                 parserEvent = parser.next();
             }
-        } catch (MalformedURLException | XmlPullParserException e) {
-            e.printStackTrace();
-            Log.e("XML", e.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e("XML", e.toString());
+        }
+        catch(IOException ex){
+            Log.e("Error", "IOException: " + ex.toString());
+        }
+        catch(Exception ex){
+            Log.e("Error", "Unknown2: " + ex.toString());
         }
     }
 }
