@@ -98,7 +98,7 @@
                 android:paddingLeft="6dp"
                 android:text="Lista:"
                 />
-            <TextView
+            <!--<TextView
                 android:id="@+id/student_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,7 +106,11 @@
                 android:paddingLeft="6sp"
                 android:text="Det finns inga studenter i databasen"
                 android:scrollbars="vertical"
-                />
+                />-->
+            <ListView
+                android:id="@+id/student_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 
 

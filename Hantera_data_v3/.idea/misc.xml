@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/alexvest/Documents/Kurser/HT-22/ISGC12/ISGC12-Utveckling-av-mobila-applikationer-HT22/Hantera_data_v3/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/alexvest/Documents/Kurser/HT-22/ISGC12/ISGC12-Utveckling-av-mobila-applikationer-HT22/Hantera_data_v3/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/alexvest/Documents/Kurser/HT-22/ISGC12/ISGC12-Utveckling-av-mobila-applikationer-HT22/Hantera_data_v3/app/src/main/res/layout/activity_student_view.xml" value="0.22" />
+        <entry key="..\:/Users/alexvest/Documents/Kurser/HT-22/ISGC12/ISGC12-Utveckling-av-mobila-applikationer-HT22/Hantera_data_v3/app/src/main/res/layout/list_item.xml" value="0.2359375" />
       </map>
     </option>
   </component>

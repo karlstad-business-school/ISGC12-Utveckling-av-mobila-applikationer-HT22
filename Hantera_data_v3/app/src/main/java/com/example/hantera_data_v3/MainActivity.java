@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
     private Database database;
 
     private EditText id_ET, namn_ET, pnr_ET;
-    private TextView stundet_list_TV;
+    //private TextView stundet_list_TV;
+    private StudentListAdapter sla;
+    private ListView student_list;
     private Button addBtn;
 
     @Override
@@ -27,11 +30,15 @@ public class MainActivity extends AppCompatActivity {
 
         database = Database.getInstance();
 
+        sla = new StudentListAdapter(this, R.layout.list_item, Database.getInstance().getStudents());
+        student_list = findViewById(R.id.student_list);
+        student_list.setAdapter(sla);
+
 
         id_ET = findViewById(R.id.student_id);
         namn_ET = findViewById(R.id.student_namn);
         pnr_ET = findViewById(R.id.student_pnr);
-        stundet_list_TV = findViewById(R.id.student_list);
+
         addBtn = findViewById(R.id.add_btn);
 
         addBtn.setOnClickListener(new View.OnClickListener() {
@@ -84,12 +91,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void updateStudentList(){
-        String students = database.printStudents();
+        /*String students = database.printStudents();
         if(students == ""){
             students = "Det finns inga studenter i databasen";
         }else{
 
         }
-        stundet_list_TV.setText(students);
+        stundet_list_TV.setText(students);*/
+        sla.update(Database.getInstance().getStudents());
     }
 }
